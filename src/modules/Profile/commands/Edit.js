@@ -46,6 +46,10 @@ class Edit extends Command {
 
         const element = args.slice(1, args.length);
 
+        if (type === 'level' && isNaN(element) ) {
+            return this.sendError(msg.channel, 'Le niveau doit etre un nombre.');
+        }
+        
         try {
             await this.module.userDB.addKey(user.id, type, element.join(' ') );
         } catch (err) {
