@@ -17,7 +17,7 @@ class Welcome extends Listener {
             description: 'welcome user upon join',
         };
 
-        this.welcomeChannelID = '603229947598733345';
+        this.welcomeChannelID = '487048687294480405';
 
         this.imageBuffer = readFileSync(`${__dirname}/../Banniere_bienvenue.png`);
     }
