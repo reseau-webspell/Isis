@@ -1,0 +1,53 @@
+{
+    "info": {
+        "name": "NookAmis",
+        "description": "NookAmis - A companion bot for NookActu",
+        "version": "1.0.0",
+        "library": "eris"
+    },
+
+    "settings": {
+        "lang": "french",
+        "debugMode": false,
+        "library": 0,
+        "logger": 1,
+        "db": 1,
+        "guildConfigCache": 1000
+    },
+    "prefixes": {
+        "general": "f!",
+        "owner": "!!",
+        "admin": "e."
+    },
+
+    "staff": {
+        "owners": [
+            {
+                "name": "KhaaZ#0001",
+                "id": "179908288337412096"
+            },
+            {
+                "name": "uRl_-#7777",
+                "id": "205439821236142082"
+            },
+            {
+                "name": "sendaisies#3108",
+                "id": "377495539857752064"
+            }
+            
+        ],
+        "admins": []
+    },
+
+    "template": {
+        "embeds": {
+            "help": "ffffff",
+            "global": 4315874,
+            "error": 15844367
+        },
+        "emotes": {
+            "error": "<:contre:604468153350619143>",
+            "success": "<:pour:604468155342913555>"
+        }
+    }
+}

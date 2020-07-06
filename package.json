@@ -1,0 +1,35 @@
+{
+  "name": "fortnitrobot",
+  "version": "1.0.0",
+  "description": "Fortnitro - Companion bot for Fortnitro.",
+  "author": "KhaaZ",
+  "link": "https://github.com/reseau-webspell/Fortitro-bot",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "axoncore": "khaaz/AxonCore#dev",
+    "chalk": "^2.4.2",
+    "eris": "^0.13.3",
+    "esm": "^3.2.25",
+    "pm2": "^4.2.1"
+  },
+  "devDependencies": {
+    "@axonteam/eslint-config": "^2.2.1",
+    "eslint": "^6.8.0"
+  },
+  "main": "./index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node -r esm src/index.js",
+    "start:pm2": "pm2 start scripts/start.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reseau-webspell/Fortitro-bot"
+  },
+  "bugs": {
+    "url": "https://github.com/reseau-webspell/Fortitro-bot/issues"
+  },
+  "homepage": "https://github.com/reseau-webspell/Fortitro-bot#readme"
+}
