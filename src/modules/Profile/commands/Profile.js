@@ -29,11 +29,11 @@ class Profile extends Command {
         } );
 
         this.status = [
-            { id: '487619001892077569', name: 'typique' },
-            { id: '487619167197986826', name: 'atypique' },
-            { id: '487619318205644802', name: 'rare' },
-            { id: '487619565199818792', name: 'épique' },
-            { id: '487619730304139264', name: 'légendaire' },
+            { id: '487619001892077569', name: 'Typique' },
+            { id: '487619167197986826', name: 'Atypique' },
+            { id: '487619318205644802', name: 'Rare' },
+            { id: '487619565199818792', name: 'Epique' },
+            { id: '487619730304139264', name: 'Légendaire' },
         ];
     }
     
@@ -56,7 +56,7 @@ class Profile extends Command {
         
         this.sendMessage(msg.channel, {
             embed: {
-                description: `** **\n**Statut du membre :** ${status}\n**Pseudo en jeu :** ${profile.pseudo || '???'}\n**Plateforme :** ${profile.plateforme || '???'}\n**Niveau en jeu :** ${profile.level || '???'}\n**Lieu-dit favori :** ${profile.location || '???'}\n**Skin favori :** ${profile.skin || '???'}\n** **`,
+                description: `** **\n**Statut du membre :** ${status || 'Inconnu'}\n**Pseudo en jeu :** ${profile.pseudo || '???'}\n**Plateforme :** ${profile.plateforme || '???'}\n**Niveau en jeu :** ${profile.level || '???'}\n**Lieu-dit favori :** ${profile.location || '???'}\n**Skin favori :** ${profile.skin || '???'}\n** **`,
                 thumbnail: {
                     url: user.avatarURL,
                 },
