@@ -24,7 +24,7 @@ class PNJ extends Module {
 
         // eslint-disable-next-line no-magic-numbers
         this.intervalTime = 24 * HOUR;
-        this.channelID = '603229947598733345';
+        this.channelID = '487048687294480405';
 
         this.switch = true;
 
