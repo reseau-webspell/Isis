@@ -4,8 +4,8 @@ class Profile extends Command {
     constructor(module) {
         super(module);
 
-        this.label = 'profile';
-        this.aliases = ['profile'];
+        this.label = 'profil';
+        this.aliases = ['profil', 'profile'];
 
         this.hasSubcmd = false;
 
