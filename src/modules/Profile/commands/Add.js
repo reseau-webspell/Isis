@@ -44,14 +44,18 @@ class Add extends Command {
             return this.sendError(msg.channel, 'Cet élément ne fait pas parti du profil.');
         }
 
-        const element = args.slice(1, args.length);
+        const element = args.slice(1, args.length).join(' ');
 
-        if (type === 'level' && isNaN(element) ) {
-            return this.sendError(msg.channel, 'Le niveau doit etre un nombre.');
+        if (type === 'level' && (isNaN(element) || (!isNaN(element) && (+element > 1000 || +element >= 0) ) ) ) {
+            return this.sendError(msg.channel, 'Le niveau doit etre un nombre compris entre 0 et 1000.');
+        }
+        // eslint-disable-next-line no-magic-numbers
+        if (element.length > 25) {
+            return this.sendError(msg.channel, 'Votre chaine de caractères est trop longue.');
         }
 
         try {
-            await this.module.userDB.addKey(user.id, type, element.join(' ') );
+            await this.module.userDB.addKey(user.id, type, element);
         } catch (err) {
             this.logger.error(`ADD - ${type}: `, err);
             return this.sendError(msg.channel, `Erreur d'ajout de l'élément ${type}, contactez un administrateur.`);
