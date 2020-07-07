@@ -49,6 +49,7 @@ const client = new Eris.Client(
         getAllUsers: true,
         messageLimit: 100,
         restMode: true,
+        intents: 5635,
         disableEvents: {
             TYPING_START: true,
         },
