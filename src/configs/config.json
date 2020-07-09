@@ -1,8 +1,8 @@
 {
     "info": {
-        "name": "NookAmis",
-        "description": "NookAmis - A companion bot for NookActu",
-        "version": "1.0.0",
+        "name": "Fortnitro",
+        "description": "Fortnitro - A companion bot for Fortnitro",
+        "version": "1.0.1",
         "library": "eris"
     },
 
