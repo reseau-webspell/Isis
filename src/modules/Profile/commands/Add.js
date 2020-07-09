@@ -46,7 +46,7 @@ class Add extends Command {
 
         const element = args.slice(1, args.length).join(' ');
 
-        if (type === 'level' && (isNaN(element) || (!isNaN(element) && (+element > 1000 || +element >= 0) ) ) ) {
+        if (type === 'level' && (isNaN(element) || (!isNaN(element) && (+element > 1000 || +element < 0) ) ) ) {
             return this.sendError(msg.channel, 'Le niveau doit etre un nombre compris entre 0 et 1000.');
         }
         // eslint-disable-next-line no-magic-numbers
