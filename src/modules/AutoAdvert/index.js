@@ -8,11 +8,11 @@ const HOUR = 3600 * 1000;
 // eslint-disable-next-line no-magic-numbers
 const DAY = 24 * HOUR;
 
-class PNJ extends Module {
+class AutoAdvert extends Module {
     constructor(...args) {
         super(...args);
 
-        this.label = 'Pnj';
+        this.label = 'Auto-advert';
 
         this.enabled = true;
         this.serverBypass = true;
@@ -121,4 +121,4 @@ class PNJ extends Module {
     }
 }
 
-export default PNJ;
+export default AutoAdvert;
