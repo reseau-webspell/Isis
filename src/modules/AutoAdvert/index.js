@@ -56,7 +56,7 @@ class AutoAdvert extends Module {
     }
 
     run() {
-        this.bot.createMessage(this.channelID, this.message).catch(err => this.logger.fatal(`ADVERT: ${err}`) );
+        this.bot.createMessage(this.channelID, this.message() ).catch(err => this.logger.fatal(`ADVERT: ${err}`) );
         
         this.logger.verbose(`Sent ad message.`);
         this.switch = !this.switch;
