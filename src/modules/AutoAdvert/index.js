@@ -1,7 +1,7 @@
 import { Module } from 'axoncore';
 
-const AD_HOURS = 18;
-const AD_MINUTES = 30;
+const AD_HOURS = 21;
+const AD_MINUTES = 0;
 
 // eslint-disable-next-line no-magic-numbers
 const HOUR = 3600 * 1000;
@@ -45,19 +45,18 @@ class AutoAdvert extends Module {
             : target - now;
         
         await this.utils.sleep(sleep);
-    
-        this.webspellLogo = this.bot.guilds.get('208202248684175360').iconURL;
-        this.fortnitroLogo = this.bot.guilds.get('486097909713207296').iconURL;
         
         this.run();
         setInterval( () => {
             this.run();
-        }, this.intervalTime * 2);
+        }, this.intervalTime);
     }
 
     run() {
-        this.bot.createMessage(this.channelID, this.message() ).catch(err => this.logger.fatal(`ADVERT: ${err}`) );
-        
+        this.bot.createMessage(this.channelID, this.switch
+            ? this.message1()
+            : this.message2() ).catch(err => this.logger.fatal(`ADVERT: ${err}`) );
+
         this.logger.verbose(`Sent ad message.`);
         this.switch = !this.switch;
     }
@@ -65,15 +64,39 @@ class AutoAdvert extends Module {
     message() {
         return {
             embed: {
-                description: "** **\nFortnitro est également présent sur Twitter, de manière plus instantanée ! Partage d'informations officielles, petits sondages amusants et conseils fort appréciables : [rejoignez-nous sur l'oiseau bleu](https://twitter.com/Fortnitro/) !\n** **",
+                description: "** **\nEn plus d'être présent sur [Twitch](https://twitch.tv/sheldask), Sheldask est également présent sur [Twitter](https://twitter.com/sheldask) et [Instagram](https://instagram.com/sheldask). \nC'est le meilleur moyen d'être au courant de tout, même des imprévus, de ne louper aucun live et de m'apercevoir !",
                 thumbnail: {
-                    url: this.fortnitroLogo,
+                    url: 'https://zupimages.net/up/21/12/hkl3.png',
                 },
                 author: {
-                    name: 'Retrouvez-nous sur Twitter !',
-                    icon_url: this.fortnitroLogo,
+                    name: 'Les réseaux sociaux de Sheldask',
+                    url: '',
+                    icon_url: 'https://zupimages.net/up/21/12/o23m.png',
                 },
-                color: 16772907,
+                color: 13838639,
+                footer: {
+                    text: 'Allez le suivre sur tous ses réseaux et recevez le badge Follower !',
+                },
+            },
+        };
+    }
+
+    message2() {
+        return {
+            embed: {
+                description: "** **\nVous pouvez [suivre](https://twitch.tv/sheldask) Sheldask sur Twitch et vous [abonner](https://www.twitch.tv/sheldask/sub) si vous le pouvez. Regarder les publicités jusqu'au bout aide beaucoup également !\nSur Discord, booster le serveur permet à Sheldask d'améliorer votre expérience sur ce dernier !",
+                thumbnail: {
+                    url: 'https://zupimages.net/up/21/12/hkl3.png',
+                },
+                author: {
+                    name: 'Les manières de soutenir Sheldask',
+                    url: '',
+                    icon_url: 'https://zupimages.net/up/21/12/o23m.png',
+                },
+                color: 13838639,
+                footer: {
+                    text: "Devenez membre d'honneur et accédez à un salon exclusif !",
+                },
             },
         };
     }
