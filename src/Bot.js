@@ -46,13 +46,17 @@ const client = new Eris.Client(
         defaultImageFormat: 'png',
         defaultImageSize: 512,
         disableEveryone: true,
-        getAllUsers: true,
+        getAllUsers: false,
         messageLimit: 100,
         restMode: true,
         disableEvents: {
             TYPING_START: true,
         },
-        intents: ['guilds', 'guildMessages'],
+        intents: [
+            'guilds',
+            'guildMessages',
+            'guildMembers',
+        ],
     },
 );
 
