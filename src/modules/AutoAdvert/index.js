@@ -61,7 +61,7 @@ class AutoAdvert extends Module {
         this.switch = !this.switch;
     }
 
-    message() {
+    message1() {
         return {
             embed: {
                 description: "** **\nEn plus d'être présent sur [Twitch](https://twitch.tv/sheldask), Sheldask est également présent sur [Twitter](https://twitter.com/sheldask) et [Instagram](https://instagram.com/sheldask). \nC'est le meilleur moyen d'être au courant de tout, même des imprévus, de ne louper aucun live et de m'apercevoir !",
