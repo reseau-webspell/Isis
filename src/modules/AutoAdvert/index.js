@@ -24,7 +24,7 @@ class AutoAdvert extends Module {
 
         // eslint-disable-next-line no-magic-numbers
         this.intervalTime = 24 * HOUR;
-        this.channelID = '487048687294480405';
+        this.channelID = '820462549002616832';
 
         this.switch = true;
 

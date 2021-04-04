@@ -29,7 +29,7 @@ class IsisClient extends AxonClient {
 
     initStatus() {
         this.botClient.editStatus(null, {
-            name: `Sheldask | twitch.tv/Sheldask`,
+            name: `Sheldask`,
             type: 3,
         } );
     }
