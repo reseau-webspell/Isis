@@ -30,7 +30,7 @@ class Welcome extends Listener {
             file: this.imageBuffer,
             name: 'banniere.png',
         } );
-        return this.sendMessage(guild.channels.get(this.welcomeChannelID), `** **\nBienvenue sur le Discord de \`Fortnitro\` ${member.mention} ! Nous t'invitons à valider le \`règlement\` dans <#486529186358624259> pour accéder à l'ensemble du serveur. N'hésites pas à envoyer un message au \`staff\` en cas de besoin !\n** **`);
+        return this.sendMessage(guild.channels.get(this.welcomeChannelID), `** **\nBienvenue sur le Discord de la \`Sheldarmy\` ${member.mention} ! Amuse-toi bien parmi nous et n'hésites pas à envoyer un message au \`staff\` en cas de besoin ! <:daskwink:817444251914076220>\n** **`);
     }
 }
 
