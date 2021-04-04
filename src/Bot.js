@@ -2,13 +2,13 @@ import Eris from 'eris';
 
 import { AxonOptions } from 'axoncore';
 
-import FortnitroClient from './FortnitroClient';
+import IsisClient from './IsisClient';
 
 import botConfig from './configs/config.json';
 import secret from './configs/secret.json';
 import lang from './configs/lang.json';
 
-import FortnitroUtils from './FortnitroUtils';
+import IsisUtils from './IsisUtils';
 
 const axonOptions = new AxonOptions( {
     prefixes: botConfig.prefixes,
@@ -25,7 +25,7 @@ const axonOptions = new AxonOptions( {
 },
 secret.webhooks,
 {
-    utils: FortnitroUtils, // use your own Utils
+    utils: IsisUtils, // use your own Utils
     logger: null, // custom Logger
     DBProvider: null, // custom DB Service
     DBLocation: `${__dirname}/../database/`,
@@ -56,7 +56,7 @@ const client = new Eris.Client(
     },
 );
 
-const Bot = new FortnitroClient(
+const Bot = new IsisClient(
     client,
     axonOptions,
 );

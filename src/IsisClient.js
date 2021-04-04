@@ -10,7 +10,7 @@ import * as modules from './modules/index';
  * @class Client
  * @extends AxonCore.AxonClient
  */
-class FortnitroClient extends AxonClient {
+class IsisClient extends AxonClient {
     constructor(client, axonOptions) {
         super(client, axonOptions, modules);
     }
@@ -29,8 +29,8 @@ class FortnitroClient extends AxonClient {
 
     initStatus() {
         this.botClient.editStatus(null, {
-            name: `${this.settings.prefixes[0]}infos | fortnitro.fr`,
-            type: 0,
+            name: `Sheldask | twitch.tv/Sheldask`,
+            type: 3,
         } );
     }
 
@@ -46,4 +46,4 @@ class FortnitroClient extends AxonClient {
     }
 }
 
-export default FortnitroClient;
+export default IsisClient;

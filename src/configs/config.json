@@ -1,7 +1,7 @@
 {
     "info": {
-        "name": "Fortnitro",
-        "description": "Fortnitro - A companion bot for Fortnitro",
+        "name": "Isis",
+        "description": "Isis - A companion bot for Sheldarmy server",
         "version": "1.0.1",
         "library": "eris"
     },
@@ -29,12 +29,7 @@
             {
                 "name": "uRl_-#7777",
                 "id": "205439821236142082"
-            },
-            {
-                "name": "sendaisies#3108",
-                "id": "377495539857752064"
             }
-            
         ],
         "admins": []
     },
