@@ -30,7 +30,7 @@ class Welcome extends Listener {
             file: this.imageBuffer,
             name: 'banniere.png',
         } );
-        return this.sendMessage(guild.channels.get(this.welcomeChannelID), `** **\nBienvenue sur le Discord de la \`Sheldarmy\` ${member.mention} ! Amuse-toi bien parmi nous et n'hésites pas à envoyer un message au \`staff\` en cas de besoin ! <:daskwink:828305153530658876>\n** **`);
+        return this.sendMessage(guild.channels.get(this.welcomeChannelID), `** **\nBienvenue sur le Discord de la \`Sheldarmy\` ${member.mention} ! Amuse-toi bien parmi nous et n'hésites pas à envoyer un message au \`staff\` en cas de besoin ! <:shelda1wink:828305153530658876>\n** **`);
     }
 }
 
